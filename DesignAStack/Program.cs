@@ -5,9 +5,7 @@ namespace DesignAStack
 {
     class Program
     {
-        private object[] stack;
-        private int top;
-
+   
         static void Main(string[] args)
         {
             var mystack = new Stack<object>();
@@ -27,41 +25,12 @@ namespace DesignAStack
             }
 
             for (int i = start; i > end; i++) {
-                mystack.Pop();
+               Console.WriteLine(mystack.Pop());
             }
-
-        }
-
-        public void Push(object obj) {
-            if (obj == null)
-            {
-                throw new InvalidOperationException("Null");
-            }
-            else {
-                stack[++top] = obj;
-            }
-
-         
             
         }
-        public object Pop()
-        {
-            if (top == -1)
-            {
-                Console.WriteLine("stack is empty");
-                return -1;
-            }
-            else {
-                return stack[top--];
-            }
 
-        }
-        public void Clear() {
-            for (int i=0; i <= stack.Length ; i++) {
-                Console.WriteLine(stack[--top]);
-            }
-
-        }
+        
        
     }
 }
