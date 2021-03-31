@@ -20,11 +20,11 @@ namespace DesignAStack
             var start = 0;
             var end = 5;
 
-            for (int i = start; i > end; i++) {
-                mystack.Push(i);
+            for (int i = start; i <= end; i++) {
+                 mystack.Push(i);
             }
 
-            for (int i = start; i > end; i++) {
+            for (int i = start; i <= end; i++) {
                Console.WriteLine(mystack.Pop());
             }
             
